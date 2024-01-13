@@ -1,0 +1,105 @@
+site_name: Creemers Consulting
+site_url: https://data.catering/
+repo_url: https://github.com/MCRE-BE/company-docs
+repo_name: company-docs
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - open-in-new-tab
+  - search
+  - optimize
+
+theme:
+  name: material
+  logo: diagrams/logo/logo-no-background.svg
+  favicon: diagrams/logo/logo-no-background.svg
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - navigation.path
+    - content.code.copy
+    - content.code.select
+    - content.tabs.link
+    - toc.integrate
+    - toc.follow
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  icon:
+    repo: fontawesome/brands/git-alt
+
+nav:
+  - Home: 'index.md'
+  - Examples:
+  - About:
+      - 'about.md'
+      - Terms of service: 'legal/terms-of-service.md'
+      - Privacy policy: 'legal/privacy-policy.md'
+  - Sponsor: 'sponsor.md'
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/MCRE-BE
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@mathias.creemers
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/mcreemers/
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:creemers.consulting@gmail.com
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+
+markdown_extensions:
+  - attr_list
+  - def_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
