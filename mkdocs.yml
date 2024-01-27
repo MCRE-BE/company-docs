@@ -1,5 +1,7 @@
 site_name: Creemers Consulting
-site_url: https://data.catering/
+# site_url: https://data.catering/
+site_author: Mathias Creemers
+site_description: Creemers Consulting EURL company website
 repo_url: https://github.com/MCRE-BE/company-docs
 repo_name: company-docs
 
@@ -7,10 +9,11 @@ extra_css:
   - stylesheets/extra.css
 
 plugins:
-  - open-in-new-tab
+  # - open-in-new-tab
   - search
-  - optimize
+  # - optimize
 
+# Site theme
 theme:
   name: material
   logo: diagrams/logo/logo-no-background.svg
@@ -55,10 +58,13 @@ theme:
         name: Switch to system preference
   icon:
     repo: fontawesome/brands/git-alt
+  plugins:
+    - search:
+      lang: en
 
 nav:
   - Home: 'index.md'
-  - Examples:
+  # - Examples:
   - About:
       - 'about.md'
       - Terms of service: 'legal/terms-of-service.md'
@@ -92,7 +98,6 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.snippets
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.tabbed:
       alternate_style: true

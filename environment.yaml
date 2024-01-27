@@ -1,0 +1,35 @@
+name: Website
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # For code formatting and linting purpuses
+  - ruff
+  - isort
+  - yapf
+
+# Development
+  - mamba
+  - libpython
+  - pip
+  - python >= 3.12
+  - pre-commit
+  - tuna
+
+# to work in VSCode
+  - ipykernel
+  - ipywidgets
+  - ipython
+  - jupyter
+  - jupyterlab-plotly-extension
+  - jupyter_nbextensions_configurator
+  - jupyterlab
+  - jupyterlab-plotly-extension
+  - nodejs
+
+# mkdocs
+  - mkdocs-material
+
+  - pip
+    - mkdocs-open-in-new-tab
